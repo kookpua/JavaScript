@@ -135,22 +135,26 @@ if ($.isNode()) {
   Object.keys(qqreadBD).forEach((item) => {
     if (qqreadBD[item]) {
       qqreadbdArr.push(qqreadBD[item]);
+	     console.log(`============ qqreadBD:${qqreadBD[item]}  =============\n`);
     }
   });
   Object.keys(qqreadtimeURL).forEach((item) => {
     if (qqreadtimeURL[item]) {
       qqreadtimeurlArr.push(qqreadtimeURL[item]);
+	     console.log(`============ qqreadBD:${qqreadtimeURL[item]}  =============\n`);
     }
   });
   Object.keys(qqreadtimeHD).forEach((item) => {
     if (qqreadtimeHD[item]) {
       qqreadtimehdArr.push(qqreadtimeHD[item]);
+	     console.log(`============ qqreadBD:${qqreadtimeHD[item]}  =============\n`);
     }
   });
 
   console.log(
-    `============ 共${qqreadtimehdArr.length}个企鹅读书账号  =============\n`
+    `============ 共${qqreadtimehdArr.length}个企鹅读书账号  =============\n`	
   );
+	  return false;
   console.log(
     `============ 脚本执行-北京时间(UTC+8)：${new Date(
       new Date().getTime() + 8 * 60 * 60 * 1000
@@ -203,12 +207,6 @@ function all() {
   qqreadbodyVal = qqreadbdArr[K];
   qqreadtimeurlVal = qqreadtimeurlArr[K];
   qqreadtimeheaderVal = qqreadtimehdArr[K];
-	$.log(`qqreadbodyVal:${qqreadbodyVal}`);
-	$.log(`qqreadbodyVal:${qqreadtimeurlVal}`);
-	$.log(`qqreadbodyVal:${qqreadtimeheaderVal}`);
-	$.log(`qqreadbodyVal:${JSON.parse(qqreadbodyVal)}`);
-	$.log(`qqreadbodyVal:${JSON.parse(qqreadtimeheaderVal)}`);
-	return;
   for (let i = 0; i < 15; i++) {
     (function (i) {
       setTimeout(
@@ -256,10 +254,10 @@ function all() {
             task.data &&
             task.data.treasureBox.videoDoneFlag == 0
           )
-            //qqreadbox2();
+            qqreadbox2();
           // 宝箱翻倍
           else if (i == 13 && task.data && task.data.taskList[1].doneFlag == 0)
-            qqreadssr3();
+            //qqreadssr3();
           // 阅读金币3
           else if (i == 14 && K < qqreadbdArr.length - 1) {
             K += 1;
