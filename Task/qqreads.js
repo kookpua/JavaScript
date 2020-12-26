@@ -154,7 +154,6 @@ if ($.isNode()) {
   console.log(
     `============ 共${qqreadtimehdArr.length}个企鹅读书账号  =============\n`	
   );
-	  return false;
   console.log(
     `============ 脚本执行-北京时间(UTC+8)：${new Date(
       new Date().getTime() + 8 * 60 * 60 * 1000
@@ -202,7 +201,7 @@ if ($request && $request.url.indexOf("addReadTimeWithBid?") >= 0) {
 
 
 let K = 0;
-all();
+//all();
 function all() {
   qqreadbodyVal = qqreadbdArr[K];
   qqreadtimeurlVal = qqreadtimeurlArr[K];
