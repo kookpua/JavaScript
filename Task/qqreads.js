@@ -229,7 +229,7 @@ function all() {
             qqreadsign(); // 金币签到
             qqreadtake(); // 阅豆签到
           } else if (i == 6 && task.data && task.data.treasureBox.doneFlag == 0)
-            qqreadbox();
+            //qqreadbox();
           // 宝箱
           else if (i == 7 && task.data && task.data.taskList[0].doneFlag == 0)
             qqreaddayread();
@@ -250,7 +250,7 @@ function all() {
             task.data &&
             task.data.treasureBox.videoDoneFlag == 0
           )
-            qqreadbox2();
+            //qqreadbox2();
           // 宝箱翻倍
           else if (i == 13 && task.data && task.data.taskList[1].doneFlag == 0)
             qqreadssr3();
