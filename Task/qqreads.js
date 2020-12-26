@@ -424,8 +424,6 @@ function qqreadinfo() {
       timeout: 60000,
     };
     $.get(toqqreadinfourl, (error, response, data) => {
-	     $.log(response);
-	     $.log(data);
       if (logs) $.log(`${jsname}, 用户名: ${data}`);
       info = JSON.parse(data);
    if (!info.data.user)
