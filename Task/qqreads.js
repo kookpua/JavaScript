@@ -262,7 +262,7 @@ function all() {
 }
      else if (i == 7 ){
        if (task.data && task.data.treasureBox.doneFlag == 0)
-              qqreadbox();// 宝箱
+              console.log('不跑宝箱了');//qqreadbox();// 宝箱
           if (task.data && task.data.taskList[1].doneFlag == 0)
               qqreadssr2();// 阅读金币2
           if (task.data && task.data.taskList[2].doneFlag == 0)
@@ -284,7 +284,7 @@ task.data.user.amount >= 100000){
 }
      else if (i == 11 ){   
           if (task.data && task.data.treasureBox.videoDoneFlag == 0)
-              qqreadbox2();// 宝箱翻倍
+              console.log('不跑宝箱了');//qqreadbox2();// 宝箱翻倍
     if (task.data && task.data.taskList[1].doneFlag == 0)
               qqreadssr3();// 阅读金币3
 }    
